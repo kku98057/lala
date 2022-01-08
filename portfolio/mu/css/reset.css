@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}

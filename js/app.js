@@ -36,8 +36,15 @@ section4Text.forEach((text)=>{
     const textParent = text.parentNode;
     textParent.classList.remove('active')
     console.log(textParent);
-  })
-})
+  });
+});
+section4Text.forEach((text)=>{
+  text.addEventListener('click',()=>{
+    const textParent = text.parentNode;
+    textParent.classList.remove('active')
+    console.log(textParent);
+  });
+});
 
 
 // 반응형
