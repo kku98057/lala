@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding:0;
+        margin:0;
+    }
+    .box{
+      width:100%;
+      height:100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size:10rem;
+      
+    }
+    .box1{
+      background-color: tomato;
+    }
+    .box2{
+      background-color: red;
+    }
+    .box3{
+      background-color: ghostwhite;
+    }
+    .box4{
+      background-color: antiquewhite;
+    }
+    .inbox{
+      width:100px;
+      height:100px;
+      background-color: aqua;
+      border-radius: 50%;
+      box-shadow: inset 0 0 10px 10px black;
+    }
+
+</style>
+<body>
+  <div class="box1 box">
+    <div class="inbox">
+      <img src="img/slide01.jpg" alt="">
+    </div>
+  </div>
+  <div class="box2 box">2</div>
+  <div class="box3 box">3</div>
+  <div class="box4 box">4</div>
+</body>
+<script>
+  
+  gsap.registerPlugin(ScrollTrigger);
+  const tl1 = gsap.timeline();
+  function tl1111(){
+  tl1.to('.box1',{
+    scale:1.2,
+    translateX:100
+  })
+  .to('.box1',{
+    opacity:0.5
+  });
+
+  ScrollTrigger.create({
+    animation:tl1,
+    trigger:'.box1',
+    pin:true,
+    scrub:true,
+    start:'top top',
+    end:'+=300%'
+  })
+}
+  const tl2 = gsap.timeline();
+
+  function tl2222(){
+  tl2.to('.box1',{
+    scale:1.2,
+    translateX:100
+  })
+  .to('.box1',{
+    opacity:0.5
+  });
+
+  ScrollTrigger.create({
+    animation:tl2,
+    trigger:'.box2',
+    pin:true,
+    scrub:true,
+    start:'top top',
+    end:'+=300%'
+  })
+};
+  tl2222();
+  tl1111();
+</script>
+</html>
